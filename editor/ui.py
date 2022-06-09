@@ -117,7 +117,7 @@ class ui:
 	class HighlightText(tk.Text):
 		def __init__(self, *args, **kwargs):
 			super().__init__(*args, **kwargs)
-			self.configure(borderwidth=0, highlightthickness=0)
+			self.configure(borderwidth=0, highlightthickness=0, wrap="none")
 			self.highlight_event = ui.DelayedEvent(self, 300)
 			self.highlight_event.bind(self.highlight)
 			self.definitions: list[ui.CodeObject] = []
